@@ -31,7 +31,7 @@ const getAllProducts = () => {
 const addToCart = (product) => {
     axios.post('http://localhost:5500/api/cart', {product}).then(
         res => {
-            // getCartQt()
+            getCartQt()
             getCartProducts()
         }
 
@@ -90,25 +90,13 @@ async function submitEmailHandler() {
 
 }
 
-// const ItemsInCart = () => {
-//     axios.get('http://localhost:5500/api/cartitems').then(
-//         res => {
-//             // const {total} = res.data
-//             console.log(res.data[0].total) 
-//             const cartTotal = res.data[0].total
-//             total.textContent = cartTotal
-        
-//         })
-
-
-// }
 
 
 
 
 showProductsButton.addEventListener("click", getAllProducts);
 submitEmail.addEventListener('click', submitEmailHandler);
-getCartProducts();
+
 
 
 

@@ -57,6 +57,7 @@
   .shopping-cart {
     width: 30vw;
     height: 100vh;
+    overflow-y: scroll;
     background-color: antiquewhite;
     display: flex;
     flex-direction: column;

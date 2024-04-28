@@ -24,6 +24,6 @@ app.get('/api/carttotal', getTotal);
 
 app.post('/api/email', getSubmit);
 
-app.get('api/cartproducts', getCartProducts);
+app.get('/api/cartproducts', getCartProducts);
 
 app.listen(SERVER_PORT, () => console.log(`server running on port ${SERVER_PORT}`));
