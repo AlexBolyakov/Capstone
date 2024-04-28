@@ -1,0 +1,154 @@
+* {
+    margin: 0;
+    padding: 0;
+  }
+  body {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 100vh;
+    font-family: 'Mukta', sans-serif;
+  }
+  header {
+    background-color: brown;
+    color: white;
+    height: 70px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    position: sticky;
+    top: 0px;
+  }
+  .cologne-world {
+    font-size: 35px;
+    margin-left: 10px;
+    transition: 1s;
+  }  
+    
+  .cologne-world:hover {
+    transform: scale(1.1, 1.1);
+    color: ivory;
+  }  
+
+  .product-card {
+    height: 250px;
+    width: 180px;
+    background-color: ivory;
+    color: darkolivegreen;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin: 20px;
+  }
+  
+  .your-cart {
+    margin-right: 10px;
+    margin-left: 10px;
+    font-size: 15px;
+    background-color: salmon;
+    width: 130px;
+    height: 27px;
+    text-align: center;
+    border-radius: 10px
+  }
+
+  .shopping-cart {
+    width: 30vw;
+    height: 100vh;
+    background-color: antiquewhite;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+
+  }
+
+  nav {
+    display: flex;
+    justify-content: space-between;
+    width: 300px;
+    margin-right: 20px;
+  }
+  
+  .cologne-pic {
+    height: 150px;
+    width: 100px;
+    border-radius: 10px;
+    object-fit: cover;
+  }
+
+  #collognes-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    
+  }
+
+  .show-all-content {
+    display: flex;
+    justify-content:space-between;
+   
+  }
+
+.n-link:hover {
+  color: orange;
+}
+
+.show-all {
+    display: flex;
+    height: 100%;
+    width: 70%;
+    align-items: center;
+    justify-content: center;
+    background-color: peachpuff;
+} 
+
+.show-btn {
+    height: 40px;
+    width: 150px;
+    border-radius: 10px;
+    font-size: 15px;
+}
+
+footer {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    height: 40px;
+    background-color: salmon;
+    position: sticky;
+    bottom: 0px;
+    
+  }
+  
+  .subscribe-form {
+    height: 40px;
+    background-color: salmon;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* margin-left: 490px; */
+    
+  }
+  
+  h4 {
+    margin-right: 10px;
+  }
+  
+  .submit-btn {
+    margin: 10px;
+    font-size: 13px;
+    font-weight: bold;
+  }
+  
+  .submit.btn:hover {
+    color: rebeccapurple;
+  }
+
+  .cart-items {
+    font-size: 30px;
+    margin: 5px;
+    
+  }
