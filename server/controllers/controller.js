@@ -65,7 +65,18 @@ module.exports = {
         `).then((db) => {
             console.log('DB', db)
             res.status(200).json(db[0])
-        }).catch(err => console.log('error submitting email', err))
+        }).catch(err => console.log('error getting product in the cart.', err))
+    },
+
+    deleteItem: (req, res) => {
+        const {id} = req.params
+        sequelize.query(`
+            delete from cart_items
+            where cart_id = ${id}; 
+        `).then((db) => {
+            console.log('DB', db)
+            res.status(200).json(db[0])
+        }).catch(err => console.log('error deleting product form the card.', err))
     }
     
 

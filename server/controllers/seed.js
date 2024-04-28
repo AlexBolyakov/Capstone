@@ -24,6 +24,7 @@ module.exports = {
         );
 
         create table cart_items(
+            cart_id serial primary key,
             product_id integer references products(product_id)
         );
 

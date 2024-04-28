@@ -4,7 +4,7 @@ const cors = require("cors");
 const {SERVER_PORT} = process.env;
 const {seed} = require('./controllers/seed.js');
 
-const {getProducts, addToCart, getTotal, getSubmit, getCartProducts} = require('./controllers/controller.js')
+const {getProducts, addToCart, getTotal, getSubmit, getCartProducts, deleteItem} = require('./controllers/controller.js')
 
 const app = express();
 
@@ -25,5 +25,7 @@ app.get('/api/carttotal', getTotal);
 app.post('/api/email', getSubmit);
 
 app.get('/api/cartproducts', getCartProducts);
+
+app.delete('/api/delete/:id', deleteItem);
 
 app.listen(SERVER_PORT, () => console.log(`server running on port ${SERVER_PORT}`));

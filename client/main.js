@@ -72,6 +72,7 @@ async function submitEmailHandler() {
 
   const getCartProducts = async () => {
     axios.get('http://localhost:5500/api/cartproducts').then(products => {
+    console.log(products)    
         cart.innerHTML = products.data.map(product => {
             
             return `
@@ -81,13 +82,21 @@ async function submitEmailHandler() {
                 <h5>Price $${product.price}</h5>
                 <h6>Rating ${product.rating}</h6>
                 <button class="${product.name}-btn" 
-                    onclick="delete('${product.product_id}')"                
+                    onclick="deleteItem('${product.cart_id}')"                
                 >Delete</button> 
                 </div>
             `
         }).join('');
     })
 
+}
+
+const deleteItem = (id) => {
+    axios.delete(`http://localhost:5500/api/delete/${id}`).then(
+        res => {
+            getCartProducts()
+        }
+    )
 }
 
 
