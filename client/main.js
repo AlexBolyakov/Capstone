@@ -44,9 +44,8 @@ const getCartQt = () => {
         res => {
             // const {total} = res.data
             console.log(res.data[0].total) 
-            const cartTotal = res.data[0].total
+            let cartTotal = res.data[0].total
             total.textContent = cartTotal
-        
         })
 }
 
@@ -94,7 +93,9 @@ async function submitEmailHandler() {
 const deleteItem = (id) => {
     axios.delete(`http://localhost:5500/api/delete/${id}`).then(
         res => {
+        
             getCartProducts()
+            getCartQt()
         }
     )
 }
